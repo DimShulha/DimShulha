@@ -55,6 +55,25 @@ public class Validator {
             return price;
         }
 
+    public static int validateDiscountInput(Scanner scanner) {
+        while (!scanner.hasNextInt()) {
+            String str = scanner.nextLine().trim();
+            System.out.printf("\"%s\" - не число!\n", str);
+            System.out.print("Введите количество!: ");
+        }
+        int quantity = scanner.nextInt();
+        while (quantity <= 0) {
+            System.out.println("Неверное значение! Введите количество: ");
+            while (!scanner.hasNextInt()) {
+                String str = scanner.next().trim();
+                System.out.printf("\"%s\" - не число!\n", str);
+                System.out.println("Введите количество!: ");
+            }
+            quantity = scanner.nextInt();
+        }
+        return quantity;
+    }
+
     public static double validateHoursInput(Scanner scanner) {
         while (!scanner.hasNextDouble()) {
             String str = scanner.nextLine().trim();
