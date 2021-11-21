@@ -46,13 +46,13 @@ public class Client implements Coast,Discount {
 
     // Подсчет цены товара со скидкой.
     @Override
-    public double calcCoast(double summ, double discount) {
-        return summ - discount;
+    public double calcCoast(double coast, double discount) {
+        return coast - discount;
     }
 
     // Сумма скидки.
     @Override
-    public double calculDiscount(double summ) {
-        return summ * discount / 100;
+    public double calculDiscount(double coast) {
+        return coast * discount / 100;
     }
 }
