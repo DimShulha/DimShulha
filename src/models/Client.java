@@ -10,7 +10,7 @@ public class Client implements Coast,Discount {
     private double price;
     private double discount;
 
-    //коструктор
+// Конструктор.
     public String getName() {
         return name;
     }
@@ -19,11 +19,11 @@ public class Client implements Coast,Discount {
         this.name = name;
     }
 
-    public int getQuantity() {
+    public int getQuontity() {
         return quontity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuontity(int quantity) {
         this.quontity = quantity;
     }
 
@@ -31,18 +31,20 @@ public class Client implements Coast,Discount {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+    public void setPrice(double price) {this.price = price;}
+
+    public double getDiscount() { return discount; }
+
+    public void setDiscount(){this.discount = discount; }
 
 
-    // Цена товара.
+    // Подсчет цены товара.
     @Override
     public double calcCoast(double price, int quontity){
         return price * quontity;
     }
 
-    // Цена товара со скидкой.
+    // Подсчет цены товара со скидкой.
     @Override
     public double calcCoast(double summ, double discount) {
         return summ - discount;
