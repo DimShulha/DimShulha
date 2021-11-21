@@ -35,7 +35,7 @@ public class Client implements Coast,Discount {
 
     public double getDiscount() { return discount; }
 
-    public void setDiscount(){this.discount = discount; }
+    public void setDiscount(double discount){this.discount = this.discount; }
 
 
     // Подсчет цены товара.
@@ -53,6 +53,6 @@ public class Client implements Coast,Discount {
     // Сумма скидки.
     @Override
     public double calculDiscount(double summ) {
-        return summ * discount;
+        return summ * discount / 100;
     }
 }
