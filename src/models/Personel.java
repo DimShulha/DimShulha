@@ -7,6 +7,7 @@ public class Personel implements Sallary {
     private double salary;
     private double hours;
 
+// Конструктор
     public String getName(){ return name; }
 
     public void setName(String name){ this.name = name;}
@@ -19,7 +20,7 @@ public class Personel implements Sallary {
 
     public void setHours(){this.hours = hours; }
 
-
+// Зарпллата сотрудника.
     @Override
     public double calcSalary(double salary, double hours){
         return salary * hours;

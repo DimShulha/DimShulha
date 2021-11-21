@@ -10,6 +10,7 @@ public class Client implements Coast,Discount {
     private double price;
     private double discount;
 
+    //коструктор
     public String getName() {
         return name;
     }
@@ -35,16 +36,19 @@ public class Client implements Coast,Discount {
     }
 
 
+    // Цена товара.
     @Override
     public double calcCoast(double price, int quontity){
         return price * quontity;
     }
 
+    // Цена товара со скидкой.
     @Override
     public double calcCoast(double summ, double discount) {
         return summ - discount;
     }
 
+    // Сумма скидки.
     @Override
     public double calculDiscount(double summ) {
         return summ * discount;
