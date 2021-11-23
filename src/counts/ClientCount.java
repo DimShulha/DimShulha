@@ -10,7 +10,7 @@ public class ClientCount {
     Client models;
     ClientView view;
 
-    public void ClienCount( Client models, ClientView view ) {
+    public ClientCount(Client models, ClientView view) {
         this.models = models;
         this.view = view;
     }
@@ -23,7 +23,7 @@ public class ClientCount {
         double coast = models.calcCoast(models.getPrice(), models.getQuontity());
         String roundCoast = Rounder.roundValue(coast);
 
-        double discount = models.calculDiscount( coast );
+        double discount = models.calculDiscount(models.getDiscount() );
         String roundDiscount = Rounder.roundValue(discount);
 
         double summ = models.calcCoast( coast, discount);
