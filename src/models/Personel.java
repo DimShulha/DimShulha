@@ -18,11 +18,12 @@ public class Personel implements Sallary {
 
     public double getHours(){ return hours; }
 
-    public void setHours(double hours){this.hours = this.hours; }
+    public void setHours(double hours){this.hours = hours; }
 
 // Зарпллата сотрудника.
     @Override
     public double calcSalary(double salary, double hours){
+
         return salary * hours;
     }
 
